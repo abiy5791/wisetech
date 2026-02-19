@@ -109,23 +109,22 @@ export function HeroSection() {
           </AnimatedSection>
 
           <AnimatedSection variant="fade-up" delay={400}>
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
+            {/* CTA Buttons */}
+            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button
                 size="lg"
+                className="group relative overflow-hidden"
                 asChild
-                className="group shadow-2xl shadow-primary/30 hover:shadow-primary/40 transition-all text-base px-8 py-6 h-auto"
               >
                 <Link href="/contact">
-                  Request a Consultation
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <span className="relative z-10 flex items-center">
+                    Request a Consultation
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <div className="absolute inset-0 -z-0 bg-gradient-to-r from-primary to-primary/80 opacity-0 transition-opacity group-hover:opacity-100" />
                 </Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-primary/30 hover:bg-primary/10 backdrop-blur-md text-base px-8 py-6 h-auto"
-              >
+              <Button size="lg" variant="outline" asChild>
                 <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
