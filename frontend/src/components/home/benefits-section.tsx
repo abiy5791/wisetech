@@ -2,7 +2,6 @@
 
 import { SectionHeading } from "@/components/section-heading"
 import { AnimatedSection } from "@/components/animated-section"
-import { GlowOrb } from "@/components/glow-orb"
 import { CheckCircle } from "lucide-react"
 
 const benefits = [
