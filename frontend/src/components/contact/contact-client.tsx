@@ -36,8 +36,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 987-6543",
-    href: "tel:+15559876543",
+    value: "+251 911 234 567",
+    href: "tel:+251911234567",
     description: "Mon-Fri 8am-6pm CST",
     action: "Call now",
   },
@@ -45,7 +45,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Headquarters",
     value: "Addis Ababa, Ethiopia",
-    href: "https://maps.google.com/?q=200+Cyber+Drive+Austin+TX",
+    href: "https://www.google.com/maps/place/Meskel+Square/@9.0104744,38.7585291,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85b915db8c8b:0xd8577380eddaf012!8m2!3d9.0104744!4d38.761104!16s%2Fm%2F04y7tcd?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D",
     description: "Visit our main office",
     action: "Get directions",
   },
@@ -58,7 +58,6 @@ const contactInfo = [
     action: "Emergency?",
   },
 ];
-
 
 export function ContactClient() {
   return (
@@ -227,7 +226,7 @@ export function ContactClient() {
                 <div className="overflow-hidden rounded-2xl border border-border shadow-2xl">
                   <div className="aspect-[16/9] w-full">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.331912998455!2d-97.74368268487685!3d30.26720298180444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sAustin%2C%20TX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31526.313279182894!2d38.7710976!3d8.9915392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b915db8c8b%3A0xd8577380eddaf012!2sMeskel%20Square!5e0!3m2!1sen!2set!4v1771506885036!5m2!1sen!2set"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -238,8 +237,6 @@ export function ContactClient() {
                     />
                   </div>
                 </div>
-
-            
               </div>
             </AnimatedSection>
 
@@ -290,7 +287,6 @@ export function ContactClient() {
         </div>
       </section>
 
-
       {/* CTA Section - Modern & Bold */}
       <section className="relative border-t border-border bg-card py-24 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
@@ -335,7 +331,7 @@ export function ContactClient() {
                     className="min-w-[200px] border-white/20 bg-white/10 text-white hover:bg-white/20"
                     asChild
                   >
-                    <Link href="tel:+15559876543">
+                    <Link href="tel:+251911234567">
                       <Phone className="mr-2 h-4 w-4" />
                       Call Us Now
                     </Link>
