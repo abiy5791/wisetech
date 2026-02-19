@@ -30,7 +30,7 @@ const solutions: Solution[] = [
     label: "SOC Monitoring",
     title: "24/7 Security Operations Monitoring",
     description:
-      "Continuous threat visibility across endpoints, cloud, and network telemetry with expert-led triage and response workflows.",
+      "Continuous threat visibility across endpoints, cloud, and network telemetry with expert-led triage and response workflows",
     highlights: [
       "Real-time detection and alert correlation",
       "Threat hunting and incident triage playbooks",
