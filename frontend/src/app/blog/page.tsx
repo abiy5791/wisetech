@@ -234,7 +234,7 @@ export default function BlogPage() {
                   className="flex flex-col justify-between rounded-2xl border border-border bg-background p-8 shadow-sm"
                 >
                   <div>
-                    <div className="mb-6 flex text-[#9CD5FF]">
+                    <div className="mb-6 flex text-blue-500">
                       {Array.from({ length: 5 }).map((_, index) => (
                         <Star key={index} className="h-4 w-4 fill-current" />
                       ))}
