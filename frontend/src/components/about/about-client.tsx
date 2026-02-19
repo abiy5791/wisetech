@@ -88,7 +88,7 @@ const values: Value[] = [
     title: "Excellence",
     description:
       "We set the highest standards in everything we do, from our assessments to our training programs.",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-sky-300 to-cyan-300",
   },
   {
     icon: Eye,
@@ -102,7 +102,7 @@ const values: Value[] = [
     title: "Partnership",
     description:
       "We work alongside our clients as true partners, investing in their long-term success and security resilience.",
-    color: "from-amber-500 to-orange-500",
+    color: "from-sky-300 to-blue-300",
   },
   {
     icon: Target,

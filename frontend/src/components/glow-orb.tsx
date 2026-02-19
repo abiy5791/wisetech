@@ -7,8 +7,8 @@ export function GlowOrb({
 }) {
   const bg =
     color === "primary"
-      ? "bg-[#fb9e2d]/15"
-      : "bg-[#fb9e2d]/8"
+      ? "bg-[#9CD5FF]/15"
+      : "bg-[#9CD5FF]/8"
 
   return (
     <div
