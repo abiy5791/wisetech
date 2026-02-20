@@ -102,7 +102,7 @@ const values: Value[] = [
     title: "Partnership",
     description:
       "We work alongside our clients as true partners, investing in their long-term success and security resilience.",
-    color: "from-blue-500 to-indigo-500",
+    color: "from-amber-500 to-orange-500",
   },
   {
     icon: Target,

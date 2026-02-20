@@ -79,7 +79,7 @@ export default function BlogPage() {
             Explore expert articles, tech trends, and practical tips to keep
             your business ahead of the curve.
           </p>
-
+{/* 
           <div className="grid grid-cols-2 items-center gap-4 md:grid-cols-5">
             {galleryImages.map((image, index) => {
               const cardHeights = [
@@ -111,7 +111,7 @@ export default function BlogPage() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -234,7 +234,7 @@ export default function BlogPage() {
                   className="flex flex-col justify-between rounded-2xl border border-border bg-background p-8 shadow-sm"
                 >
                   <div>
-                    <div className="mb-6 flex text-blue-500">
+                    <div className="mb-6 flex text-yellow-500">
                       {Array.from({ length: 5 }).map((_, index) => (
                         <Star key={index} className="h-4 w-4 fill-current" />
                       ))}
