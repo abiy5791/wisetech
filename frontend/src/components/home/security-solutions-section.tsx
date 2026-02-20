@@ -127,33 +127,35 @@ export function SecuritySolutionsSection() {
 
         {/* Modern Tab Navigation */}
         <AnimatedSection delay={120}>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-2">
-            {solutions.map((solution) => {
-              const Icon = solution.icon
-              return (
-                <button
-                  key={solution.key}
-                  type="button"
-                  onClick={() => setActiveKey(solution.key)}
-                  className={`group relative inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 ${
-                    activeKey === solution.key
-                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                      : "bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card border border-border/50 hover:border-border"
-                  }`}
-                >
-                  <Icon className="h-4 w-4" strokeWidth={2} />
-                  {solution.label}
-                </button>
-              )
-            })}
+          <div className="mt-16 overflow-x-auto scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent">
+            <div className="flex gap-2 px-2 min-w-max">
+              {solutions.map((solution) => {
+                const Icon = solution.icon
+                return (
+                  <button
+                    key={solution.key}
+                    type="button"
+                    onClick={() => setActiveKey(solution.key)}
+                    className={`group relative inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                      activeKey === solution.key
+                        ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                        : "bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card border border-border/50 hover:border-border"
+                    }`}
+                  >
+                    <Icon className="h-4 w-4" strokeWidth={2} />
+                    {solution.label}
+                  </button>
+                )
+              })}
+            </div>
           </div>
         </AnimatedSection>
 
         {/* Content Area */}
         <AnimatedSection delay={220}>
-          <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="mt-12 sm:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Left: Image Hero */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden border border-border shadow-xl">
+            <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden border border-border shadow-xl">
               <Image
                 src={`/images/solutions-${active.key}.jpg`}
                 alt={`${active.label} illustration`}
@@ -162,30 +164,30 @@ export function SecuritySolutionsSection() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="inline-flex items-center gap-2 rounded-lg bg-background/80 backdrop-blur-sm px-3 py-1.5 text-xs font-medium text-primary mb-4 border border-border/50">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
+                <div className="inline-flex items-center gap-2 rounded-lg bg-background/80 backdrop-blur-sm px-3 py-1.5 text-xs font-medium text-primary mb-3 sm:mb-4 border border-border/50">
                   <ShieldCheck className="h-3 w-3" />
                   Active Solution
                 </div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm">
-                    <ActiveIcon className="h-6 w-6 text-primary-foreground" strokeWidth={2} />
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-primary/90 backdrop-blur-sm">
+                    <ActiveIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" strokeWidth={2} />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">{active.label}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">{active.label}</h3>
                 </div>
               </div>
             </div>
 
             {/* Right: Content */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <h3 className="text-3xl font-bold text-foreground leading-tight">{active.title}</h3>
-                <p className="mt-4 text-base text-muted-foreground leading-relaxed">{active.description}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">{active.title}</h3>
+                <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">{active.description}</p>
               </div>
 
               {/* Key Features */}
-              <div className="rounded-xl border border-border bg-card p-6">
-                <h4 className="text-xs font-semibold text-foreground mb-4 uppercase tracking-wider">Key Features</h4>
+              <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+                <h4 className="text-xs font-semibold text-foreground mb-3 sm:mb-4 uppercase tracking-wider">Key Features</h4>
                 <div className="space-y-3">
                   {active.highlights.map((item, idx) => (
                     <div key={item} className="flex items-start gap-3">
@@ -199,8 +201,8 @@ export function SecuritySolutionsSection() {
               </div>
 
               {/* Info Box */}
-              <div className="rounded-xl border border-primary/20 bg-primary/5 p-5">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-5">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-foreground">What's Included:</span> Every engagement includes executive-ready reporting and a prioritized remediation roadmap aligned to your business risk.
                 </p>
               </div>

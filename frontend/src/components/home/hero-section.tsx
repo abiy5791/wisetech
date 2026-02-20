@@ -18,10 +18,10 @@ import { AnimatedSection } from "@/components/animated-section";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[100vh] flex items-center">
-      <GlowOrb className="h-[700px] w-[700px] -top-52 -right-52 z-0" />
+    <section className="relative overflow-hidden min-h-[100vh] flex items-center py-16 sm:py-0">
+      <GlowOrb className="h-[400px] w-[400px] sm:h-[700px] sm:w-[700px] -top-32 -right-32 sm:-top-52 sm:-right-52 z-0" />
       <GlowOrb
-        className="h-[500px] w-[500px] -bottom-24 -left-32 z-0"
+        className="h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -bottom-16 -left-16 sm:-bottom-24 sm:-left-32 z-0"
         color="secondary"
       />
 
@@ -29,7 +29,7 @@ export function HeroSection() {
       {/* <div className="cyber-scanline z-0" aria-hidden="true" /> */}
 
       {/* Floating security icons */}
-      <div className="absolute inset-0 z-0" aria-hidden="true">
+      <div className="absolute inset-0 z-0 hidden sm:block" aria-hidden="true">
         <Shield
           className="absolute top-[15%] left-[8%] h-12 w-12 text-primary/30 animate-float"
           style={{ animationDelay: "0s" }}
@@ -78,19 +78,19 @@ export function HeroSection() {
         <div className="absolute bottom-[60%] right-[45%] h-3 w-3 rounded-full bg-primary/45 animate-pulse delay-900 shadow-lg shadow-primary/50" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20 lg:py-24 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection variant="fade-down" delay={0}>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-gradient-to-r from-primary/15 to-primary/5 px-5 py-2 backdrop-blur-md shadow-lg shadow-primary/10">
-              <Sparkles className="h-4 w-4 text-primary animate-pulse" />
-              <span className="text-sm font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <div className="mb-6 sm:mb-8 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-gradient-to-r from-primary/15 to-primary/5 px-4 py-1.5 sm:px-5 sm:py-2 backdrop-blur-md shadow-lg shadow-primary/10">
+              <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary animate-pulse" />
+              <span className="text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                 Trusted Cybersecurity Partner
               </span>
             </div>
           </AnimatedSection>
 
           <AnimatedSection variant="fade-up" delay={100}>
-            <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-balance sm:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl">
               Protect Your Business with{" "}
               <span className="bg-gradient-to-r from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent animate-gradient">
                 Expert Cybersecurity
@@ -100,7 +100,7 @@ export function HeroSection() {
           </AnimatedSection>
 
           <AnimatedSection variant="fade-up" delay={250}>
-            <p className="mt-8 max-w-3xl mx-auto text-xl leading-relaxed text-muted-foreground/90 text-balance">
+            <p className="mt-5 sm:mt-8 max-w-3xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground/90 text-balance">
               WiseTech delivers comprehensive cybersecurity consulting,
               assessments, and training. We help organizations identify
               vulnerabilities, meet compliance requirements, and build resilient
@@ -110,10 +110,10 @@ export function HeroSection() {
 
           <AnimatedSection variant="fade-up" delay={400}>
             {/* CTA Buttons */}
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+            <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button
                 size="lg"
-                className="group relative overflow-hidden"
+                className="group relative overflow-hidden w-full sm:w-auto"
                 asChild
               >
                 <Link href="/contact">
@@ -124,7 +124,7 @@ export function HeroSection() {
                   <div className="absolute inset-0 -z-0 bg-gradient-to-r from-primary to-primary/80 opacity-0 transition-opacity group-hover:opacity-100" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
