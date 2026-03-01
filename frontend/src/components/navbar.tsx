@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Shield, ChevronDown} from "lucide-react";
+import { Menu, X, Shield, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "Products", href: "/products" },
   {
     name: "Services",
     href: "/services",
@@ -47,11 +48,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "border-b border-border/50 bg-background/90 backdrop-blur-xl shadow-lg shadow-background/50"
           : "border-b border-transparent bg-transparent backdrop-blur-sm"
-      }`}
+        }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* <div className="flex shrink-0 items-center gap-4">
@@ -92,11 +92,10 @@ export function Navbar() {
                   />
                 </button>
                 <div
-                  className={`cyber-panel absolute left-0 top-[calc(100%+2px)] z-[60] w-72 rounded-xl p-2.5 shadow-xl shadow-background/50 transition-all duration-200 ${
-                    servicesOpen
+                  className={`cyber-panel absolute left-0 top-[calc(100%+2px)] z-[60] w-72 rounded-xl p-2.5 shadow-xl shadow-background/50 transition-all duration-200 ${servicesOpen
                       ? "pointer-events-auto translate-y-0 opacity-100"
                       : "pointer-events-none -translate-y-2 opacity-0"
-                  }`}
+                    }`}
                 >
                   <div
                     className="pointer-events-none absolute -top-2 left-0 h-2 w-full"
@@ -158,9 +157,8 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`border-t border-border bg-background/95 backdrop-blur-xl lg:hidden transition-all duration-300 overflow-hidden ${
-          mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`border-t border-border bg-background/95 backdrop-blur-xl lg:hidden transition-all duration-300 overflow-hidden ${mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="mx-auto max-w-7xl px-6 py-4">
           {navigation.map((item) => (
